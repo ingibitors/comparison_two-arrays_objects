@@ -23,7 +23,7 @@ let likedArray=[
     {"id":10,"linkToProduct":"https://cdn.shopify.com/s/files/1/0521/9693/3824/products/Garrison-Navy-sq1_540x.jpg?v=1635325523","imgSRC":"https://cdn.shopify.com/s/files/1/0521/9693/3824/products/Garrison-Navy-sq1_540x.jpg?v=1635325523","altText":"Curragh Navy","titleOfProduct":"Curragh Navy","productPrice":40,"productDescription":"Our ¼ zip funnel neck jumper in 100% Merino wool from the renowned Zegna Baruffa Mill in Italy.","color":"black"},
     {"id":11,"linkToProduct":"https://cdn.shopify.com/s/files/1/0521/9693/3824/products/Garrison-Navy-sq1_540x.jpg?v=1635325523","imgSRC":"https://cdn.shopify.com/s/files/1/0521/9693/3824/products/Garrison-Navy-sq1_540x.jpg?v=1635325523","altText":"Curragh Navy","titleOfProduct":"Curragh Navy","productPrice":40,"productDescription":"Our ¼ zip funnel neck jumper in 100% Merino wool from the renowned Zegna Baruffa Mill in Italy.","color":"black"},
 ]
-
+//по каждому єлементу массива объектов elementFromFirstArray запускаем условие если из массива объектов products elementsFromProductsArray elementFromFirstArray.id не равняется elementsFromProductsArray.id то добавить поле liked которое равно yes
 const res = likedArray.map((elementFromFirstArray) => {
     if (!products.find(elementsFromProductsArray => elementFromFirstArray.id === elementsFromProductsArray.id)) {
         elementFromFirstArray.liked = "yes"
@@ -32,4 +32,5 @@ const res = likedArray.map((elementFromFirstArray) => {
 
 });
 
+console.log('new array:');
 console.log(res);
